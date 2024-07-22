@@ -1,8 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 
-namespace HelloWorld
+namespace FirstTest
 {
+
+    /*class Car
+    {
+        public string color = "red";
+
+    }*/
     class Program
     {
         static void Main(string[] args)
@@ -115,6 +121,19 @@ namespace HelloWorld
 
             string txt = $"\"{newName}\" is the main character.";
             Console.WriteLine(txt);
+
+            //Classes and Objects
+
+            Car myObj = new Car(2024);
+            myObj.maxSpeed = 200;
+            Console.WriteLine(myObj.color);
+            Console.WriteLine(myObj.maxSpeed);
+            myObj.FullThrottle();
+            Console.WriteLine(myObj.model);
+            Console.WriteLine(myObj.year);
         }
     }
+
+   
+
 }
