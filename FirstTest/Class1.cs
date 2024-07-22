@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace FirstTest
 {
-    class Car
+
+    class Vehicle
+    {
+        public string brand = "Ford"; //variable
+        public void honk()  //method
+        {
+            Console.WriteLine("Peeeeep!");
+        }
+    }
+    class Car : Vehicle
     {
         public string color = "red";
         public int maxSpeed;
@@ -26,5 +35,14 @@ namespace FirstTest
             year = buildYear;
         }
 
+        //property
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string modelName = "mustang";
     }
 }

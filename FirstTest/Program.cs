@@ -131,6 +131,29 @@ namespace FirstTest
             myObj.FullThrottle();
             Console.WriteLine(myObj.model);
             Console.WriteLine(myObj.year);
+
+            //property obj
+            Car property = new Car(2024);
+            property.Name = "Focus";
+            Console.WriteLine(property.Name);
+
+            //inheritance
+            Console.WriteLine("Example of inheritance");
+
+            Car inherit = new Car(2024);
+            inherit.honk();
+
+            Console.WriteLine(inherit.brand + "  " + inherit.modelName);
+
+            //polymorphism
+            Console.WriteLine("This is an example for polymorphism");
+            Animal animal = new Animal();
+            Animal pig = new Pig();
+            Animal dog = new Dog();
+            animal.animalSound();
+            pig.animalSound();
+            dog.animalSound();
+
         }
     }
 
