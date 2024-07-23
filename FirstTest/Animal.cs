@@ -28,4 +28,28 @@ namespace FirstTest
             Console.WriteLine("This is a dog class");
         }
     }
+
+    //interface
+    interface IBird 
+    {
+        void birdName(); //Interface method does not have a body
+    }
+
+    class Pegion : IBird //Inherit interface
+    {
+        public void birdName()
+        {
+            Console.WriteLine("This is inheritated from an interface");
+        }
+    }
+
+    //enumerators
+    enum Months
+    {
+        January,
+        February,
+        March,
+        April
+    }
+
 }

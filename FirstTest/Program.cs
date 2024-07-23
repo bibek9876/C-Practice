@@ -154,6 +154,16 @@ namespace FirstTest
             pig.animalSound();
             dog.animalSound();
 
+            //interface
+            Console.WriteLine("THis is an example for interface");
+            Pegion pegion = new Pegion();
+            pegion.birdName();
+
+            //Enumerators
+            Console.WriteLine("This is an example for enums:");
+            int month = (int)Months.February;
+            Console.WriteLine(month);
+
         }
     }
 
