@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.IO;
 
 namespace FirstTest
 {
@@ -22,16 +23,30 @@ namespace FirstTest
             int myInt = (int)myDouble;
             Console.WriteLine(myInt);
             Console.WriteLine(name);
+            try
+            {
+                Console.WriteLine("Enter your Username:");
+                string userName = Console.ReadLine();
 
-            Console.WriteLine("Enter your Username:");
+                Console.WriteLine("Your username is:" + userName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong");
+            }
 
-            string userName = Console.ReadLine();
-
-            Console.WriteLine("Your username is:" + userName);
 
             Console.WriteLine("Enter your age:");
             int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your guess age is: " + age);
+            if (age > 90)
+            {
+                throw new ArithmeticException("Your age cannot be more than 90 years old");
+            }
+            else
+            {
+
+                Console.WriteLine("Your guess age is: " + age);
+            }
             int myAge = 25;
 
             if (age == myAge)
@@ -164,6 +179,12 @@ namespace FirstTest
             int month = (int)Months.February;
             Console.WriteLine(month);
 
+            //working with files
+            string writeText = "This is a new test file.";
+            File.WriteAllText("testfile.txt", writeText);
+
+            string readText = File.ReadAllText("testfile.txt");
+            Console.WriteLine(readText);
         }
     }
 
